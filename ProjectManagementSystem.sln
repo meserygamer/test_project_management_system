@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.Core", "ProjectManagementSystem.Core\ProjectManagementSystem.Core.csproj", "{819DAFCE-14C2-4F26-BFC4-72329FC4AC45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.Application", "ProjectManagementSystem.Application\ProjectManagementSystem.Application.csproj", "{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{819DAFCE-14C2-4F26-BFC4-72329FC4AC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{819DAFCE-14C2-4F26-BFC4-72329FC4AC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{819DAFCE-14C2-4F26-BFC4-72329FC4AC45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
