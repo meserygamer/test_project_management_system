@@ -26,4 +26,9 @@ public class ProjectTask
     /// Current task status
     /// </summary>
     public TaskStatus TaskStatus { get; set; }
+
+    /// <summary>
+    /// Responsible for completing the task
+    /// </summary>
+    public User ResponsibleUser { get; set; } = null!;
 }

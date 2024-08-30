@@ -7,7 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="Add ProjectManagementSystem.Core into solution" />
+    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="Add ProjectManagementSystem.Core into solution">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/ProjectManagementSystem.ConsoleApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/ProjectManagementSystem.ConsoleApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/TaskStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/TaskStatus.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +22,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;meserygamer&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/meserygamer/test_project_management_system.git&quot;,
+    &quot;accountId&quot;: &quot;098be5c3-060a-4fbf-9833-4937ae55f684&quot;
+  }
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2lM3BRJuz8VGQBIWUJppZSWI5UJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,9 +58,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\kiril\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\meser\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -75,6 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1724975982312</updated>
       <workItem from="1724975985522" duration="1695000" />
+      <workItem from="1725007712364" duration="17000" />
+      <workItem from="1725007766336" duration="1666000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

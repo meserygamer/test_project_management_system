@@ -1,4 +1,6 @@
-﻿namespace ProjectManagementSystem.ConsoleApp;
+﻿using ProjectManagementSystem.Core.DomainEntities;
+
+namespace ProjectManagementSystem.ConsoleApp;
 
 public static class Startup
 {
