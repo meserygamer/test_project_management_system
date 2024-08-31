@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.Application", "ProjectManagementSystem.Application\ProjectManagementSystem.Application.csproj", "{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.Infrastructure", "ProjectManagementSystem.Infrastructure\ProjectManagementSystem.Infrastructure.csproj", "{E64DBC55-D49A-4043-97D1-D65EBF1DAAE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementSystem.SQLiteDb", "ProjectManagementSystem.SQLiteDb\ProjectManagementSystem.SQLiteDb.csproj", "{67B2A629-C888-4AEB-A502-7BE12783BE59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7262EE28-BDB8-4AA8-9B11-8A0312FD1E34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E64DBC55-D49A-4043-97D1-D65EBF1DAAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E64DBC55-D49A-4043-97D1-D65EBF1DAAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E64DBC55-D49A-4043-97D1-D65EBF1DAAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E64DBC55-D49A-4043-97D1-D65EBF1DAAE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B2A629-C888-4AEB-A502-7BE12783BE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B2A629-C888-4AEB-A502-7BE12783BE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B2A629-C888-4AEB-A502-7BE12783BE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B2A629-C888-4AEB-A502-7BE12783BE59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
