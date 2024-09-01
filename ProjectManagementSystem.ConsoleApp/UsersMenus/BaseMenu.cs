@@ -10,4 +10,6 @@ public abstract class BaseMenu
     {
         User = user;
     }
+
+    public abstract void ShowMenu();
 }
