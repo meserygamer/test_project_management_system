@@ -1,10 +1,14 @@
 namespace ProjectManagementSystem.Core.DomainEntities;
 
-public enum TaskStatus
+public class TaskStatus
 {
-    ToDo = 1,
-    InProgress = 2,
-    Blocked = 3,
-    Done = 4,
-    Removed = 5
+    /// <summary>
+    /// Id of task status
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
+    /// Title of task status
+    /// </summary>
+    public string Title { get; set; } = null!;
 }

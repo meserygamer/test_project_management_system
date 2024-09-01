@@ -21,5 +21,10 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRoleEntity>
         builder.HasMany(ur => ur.Users)
             .WithOne(u => u.UserRole)
             .HasForeignKey(u => u.UserRoleId);
+        
+        builder.HasData(
+            new UserRoleEntity {Title = "Управляющий"},
+            new UserRoleEntity {Title = "Обычный сотрудник"}
+            );
     }
 }

@@ -21,5 +21,13 @@ public class TaskStatusConfiguration : IEntityTypeConfiguration<TaskStatusEntity
         builder.HasMany(ts => ts.Tasks)
             .WithOne(pt => pt.TaskStatus)
             .HasForeignKey(pt => pt.TaskStatusId);
+        
+        builder.HasData(
+            new TaskStatusEntity {Title = "Не в работе"},
+            new TaskStatusEntity {Title = "В работе"},
+            new TaskStatusEntity {Title = "Заблокировано"},
+            new TaskStatusEntity {Title = "Готово"},
+            new TaskStatusEntity {Title = "Удалено"}
+        );
     }
 }
