@@ -7,12 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="Add Menus for different roles and factory&#10;&#10;Add:&#10;- BaseMenu&#10;- OrdinaryEmployeeMenu&#10;- SupervisorMenu&#10;- MenuFactory">
+    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="Add extensions for IServiceCollection">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/UserAuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/UserAuthenticationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/BaseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/BaseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/OrdinaryEmployeeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/OrdinaryEmployeeMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/SupervisorMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/SupervisorMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UserAuthenticator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UserAuthenticator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SQLiteUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SQLiteUserRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +45,14 @@
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/ProjectManagementSystem/ProjectManagementSystem.ConsoleApp/Startup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/ProjectManagementSystem/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/ProjectManagementSystem/ProjectManagementSystem.Core/DomainEntities/TaskStatus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/UsersMenus/BaseMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/UsersMenus/BaseMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/UsersMenus/OrdinaryEmployeeMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/UsersMenus/SupervisorMenu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -112,7 +119,7 @@
       <workItem from="1725056005617" duration="6066000" />
       <workItem from="1725107768935" duration="45000" />
       <workItem from="1725108248436" duration="1837000" />
-      <workItem from="1725190341520" duration="4084000" />
+      <workItem from="1725190341520" duration="9058000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -170,7 +177,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725193596615</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add abstract ShowMenu() into base menu">
+      <option name="closed" value="true" />
+      <created>1725194655263</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725194655263</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add extensions for IServiceCollection">
+      <option name="closed" value="true" />
+      <created>1725194690877</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725194690877</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +222,8 @@
     <MESSAGE value="Add Db Initial Migration" />
     <MESSAGE value="Add Menus for different roles and factory" />
     <MESSAGE value="Add Menus for different roles and factory&#10;&#10;Add:&#10;- BaseMenu&#10;- OrdinaryEmployeeMenu&#10;- SupervisorMenu&#10;- MenuFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Menus for different roles and factory&#10;&#10;Add:&#10;- BaseMenu&#10;- OrdinaryEmployeeMenu&#10;- SupervisorMenu&#10;- MenuFactory" />
+    <MESSAGE value="Add abstract ShowMenu() into base menu" />
+    <MESSAGE value="Add extensions for IServiceCollection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add extensions for IServiceCollection" />
   </component>
 </project>

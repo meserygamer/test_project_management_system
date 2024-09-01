@@ -16,9 +16,9 @@ public class UserAuthenticationService
         _passwordHasher = passwordHasher ?? throw new ArgumentNullException(nameof(passwordHasher));
     }
 
-    public User? AuthenticateUser(string login, string password)
+    public async Task<User?> AuthenticateUserAsync(string login, string password)
     {
-        User? intendedUser = _userRepository.GetUserByLogin(login);
+        User? intendedUser = await _userRepository.GetUserByLoginAsync(login);
         string? intendedUserHashedPassword = intendedUser?.HashedPassword;
         return _passwordHasher.VerifyPassword(password, intendedUserHashedPassword) ? intendedUser : null;
     }

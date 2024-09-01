@@ -16,10 +16,10 @@ public class UserAuthenticator
         _userAuthenticationService = userAuthenticationService;
     }
 
-    public User AuthenticateUser()
+    public async Task<User> AuthenticateUserAsync()
     {
         PrintGreeting();
-        return GetUserFromConsole();
+        return await GetUserFromConsoleAsync();
     }
 
     private void PrintGreeting()
@@ -45,7 +45,7 @@ public class UserAuthenticator
         return Console.ReadLine() ?? "";
     }
 
-    private User GetUserFromConsole()
+    private async Task<User> GetUserFromConsoleAsync()
     {
         User? user;
         do
@@ -53,7 +53,7 @@ public class UserAuthenticator
             string login = GetLoginFromUser();
             string password = GetPasswordFromUser();
 
-            user = _userAuthenticationService.AuthenticateUser(login, password);
+            user = await _userAuthenticationService.AuthenticateUserAsync(login, password);
             if (user is null)
             {
                 Console.Clear();

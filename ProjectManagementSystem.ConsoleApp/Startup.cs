@@ -12,18 +12,21 @@ namespace ProjectManagementSystem.ConsoleApp;
 
 public static class Startup
 {
-    public static void Main()
+    public static async Task Main()
     {
         IServiceCollection services = new ServiceCollection()
             .AddTransient<UserAuthenticator>()
             .AddTransient<UserAuthenticationService>()
             .AddSingleton<MenuFactory>()
             .AddInfrastructure()
-            .AddRepositories();
+            .AddSqLiteDbContextFactory()
+            .AddRepositories()
+            .AddMappersForDb();
 
         ServiceProvider serviceProvider = services.BuildServiceProvider();
-        User? user = serviceProvider.GetService<UserAuthenticator>()?
-            .AuthenticateUser();
+        UserAuthenticator userAuthenticator = serviceProvider.GetService<UserAuthenticator>() 
+                                              ?? throw new SystemException("UserAuthenticator in DICont was not found");
+        User? user = await userAuthenticator.AuthenticateUserAsync();
         
         if (user is null)
             throw new SystemException();

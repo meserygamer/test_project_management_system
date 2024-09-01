@@ -1,17 +1,39 @@
+using Microsoft.EntityFrameworkCore;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Core.RepositoryInterfaces;
+using ProjectManagementSystem.SQLiteDb.Entities;
+using ProjectManagementSystem.SQLiteDb.Mappers;
 
 namespace ProjectManagementSystem.SQLiteDb.Repositories;
 
 public class SQLiteUserRepository : IUserRepository
 {
-    public List<User> GetAllUsers()
+    private readonly Func<ProjectManagementSystemSQLiteDbContext> _dbContextFactory;
+    private readonly IMapper<UserEntity, User> _mapperUserToCore;
+    
+    public SQLiteUserRepository(Func<ProjectManagementSystemSQLiteDbContext> dbContextFactory,
+        IMapper<UserEntity, User> mapperToCore)
     {
-        throw new NotImplementedException();
+        _dbContextFactory = dbContextFactory ?? throw new ArgumentNullException();
+        _mapperUserToCore = mapperToCore ?? throw new ArgumentNullException();
+    }
+    
+    public async Task<List<User>> GetAllUsersAsync()
+    {
+        List<UserEntity> usersFromDb;
+        using (ProjectManagementSystemSQLiteDbContext db = _dbContextFactory.Invoke()) 
+            usersFromDb = await db.Users.Include(ue => ue.UserRole).ToListAsync();
+        return usersFromDb.ConvertAll<User>(ue => _mapperUserToCore.MapToDestination(ue)).ToList();
     }
 
-    public User? GetUserByLogin(string login)
+    public async Task<User?> GetUserByLoginAsync(string login)
     {
-        throw new NotImplementedException();
+        UserEntity? userFromDb;
+        using (ProjectManagementSystemSQLiteDbContext db = _dbContextFactory.Invoke())
+            userFromDb = await db.Users.Include(ue => ue.UserRole)
+                .FirstOrDefaultAsync(ue => ue.Login == login);
+        return userFromDb is null 
+            ? null 
+            : _mapperUserToCore.MapToDestination(userFromDb);
     }
 }
