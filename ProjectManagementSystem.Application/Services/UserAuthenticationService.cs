@@ -19,7 +19,7 @@ public class UserAuthenticationService
     public User? AuthenticateUser(string login, string password)
     {
         User? intendedUser = _userRepository.GetUserByLogin(login);
-        string? intendedUserHashedPassword = intendedUser?.AuthenticationData.HashedPassword;
+        string? intendedUserHashedPassword = intendedUser?.HashedPassword;
         return _passwordHasher.VerifyPassword(password, intendedUserHashedPassword) ? intendedUser : null;
     }
 }

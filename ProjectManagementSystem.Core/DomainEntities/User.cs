@@ -23,7 +23,12 @@ public class User
     public string Email { get; set; } = null!;
 
     /// <summary>
-    /// Authentication data of the user
+    /// Login of user
     /// </summary>
-    public UserAuthenticationData AuthenticationData { get; set; } = null!;
+    public string Login { get; set; } = null!;
+
+    /// <summary>
+    /// Hashed password of user
+    /// </summary>
+    public string HashedPassword { get; set; } = null!;
 }
