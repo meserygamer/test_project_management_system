@@ -11,14 +11,20 @@ public class UserEntity
     public string Patronymic { get; set; } = null!;
     
     public string Email { get; set; } = null!;
-
-    public int UserRoleId { get; set; }
-
+    
     public string Login { get; set; } = null!;
     
     public string HashedPassword { get; set; } = null!;
 
+    public int UserRoleId { get; set; }
+    
+    #region NavigationProperties
+
     public UserRoleEntity UserRole { get; set; } = null!;
 
-    public ProjectTaskEntity[] Tasks { get; set; } = null!;
+    public ICollection<ProjectTaskEntity> Tasks { get; set; } = null!;
+
+    public ICollection<ChangeOfTaskStatusEntity> ChangesTasksStatus { get; set; } = null!;
+
+    #endregion
 }

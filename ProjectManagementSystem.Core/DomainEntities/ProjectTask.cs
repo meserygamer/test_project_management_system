@@ -5,7 +5,7 @@ public class ProjectTask
     /// <summary>
     /// Number of task in the system
     /// </summary>
-    public int TaskNumber { get; set; }
+    public int Id { get; set; }
 
     /// <summary>
     /// Task title in the system

@@ -6,5 +6,9 @@ public class UserRoleEntity
 
     public string Title { get; set; } = null!;
 
-    public UserEntity[] Users { get; set; } = null!;
+    #region NavigationProperties
+
+    public ICollection<UserEntity> Users { get; set; } = null!;
+
+    #endregion
 }

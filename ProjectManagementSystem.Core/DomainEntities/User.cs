@@ -3,6 +3,11 @@ namespace ProjectManagementSystem.Core.DomainEntities;
 public class User
 {
     /// <summary>
+    /// Number of user into system
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Name of the user
     /// </summary>
     public string Name { get; set; } = null!;

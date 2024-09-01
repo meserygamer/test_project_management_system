@@ -13,8 +13,14 @@ public class ProjectTaskEntity
     public int TaskStatusId { get; set; }
 
     public int ResponsibleUserId { get; set; }
+    
+    #region NavigationProperties
 
     public UserEntity ResponsibleUser { get; set; } = null!;
 
     public TaskStatusEntity TaskStatus { get; set; } = null!;
+
+    public ICollection<ChangeOfTaskStatusEntity> ChangesStatusHistory { get; set; } = null!;
+
+    #endregion
 }
