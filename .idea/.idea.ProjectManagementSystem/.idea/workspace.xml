@@ -8,14 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/dataSources/dd237e23-7553-408c-82cf-b246f631bb7d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/dataSources/dd237e23-7553-408c-82cf-b246f631bb7d/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/ProjectTaskEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/ProjectTaskEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/TaskStatusEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/TaskStatusEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/UserEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/UserEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/UserRoleEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/UserRoleEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/ProjectManagementSystem.SQLiteDb.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/ProjectManagementSystem.SQLiteDb.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +35,12 @@
     &quot;assignee&quot;: &quot;meserygamer&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/meserygamer/test_project_management_system&quot;,
-    &quot;accountId&quot;: &quot;15e9bd57-31e4-4710-b260-f4f4b3c85eb5&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/meserygamer/test_project_management_system",
+    "accountId": "098be5c3-060a-4fbf-9833-4937ae55f684"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/ProjectManagementSystem/ProjectManagementSystem.ConsoleApp/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/ProjectManagementSystem/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" root0="SKIP_HIGHLIGHTING" />
@@ -60,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.ProjectManagementSystem.ConsoleApp.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "TestFeatures",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.ProjectManagementSystem.ConsoleApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TestFeatures&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\meser\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\meser\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ProjectManagementSystem.ConsoleApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -115,6 +111,7 @@
       <workItem from="1725056005617" duration="6066000" />
       <workItem from="1725107768935" duration="45000" />
       <workItem from="1725108248436" duration="1837000" />
+      <workItem from="1725190341520" duration="2873000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -148,7 +145,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725010923537</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add DbContext and History of changes tasks status&#10;&#10;Add:&#10;- ChangeOfTaskStatusConfiguration&#10;- ChangeOfTaskStatusEntity&#10;- ProjectManagementSystemSQLiteDbContext&#10;Refactoring Db Entities">
+      <option name="closed" value="true" />
+      <created>1725154249641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725154249641</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Db Initial Migration">
+      <option name="closed" value="true" />
+      <created>1725154279072</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725154279072</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +186,8 @@
     <MESSAGE value="Add ProjectManagementSystem.Core into solution" />
     <MESSAGE value="Add user in system&#10;&#10;Add: &#10;- User&#10;- UserAuthenticationData&#10;- UserRole&#10;Change:&#10;- Numbering in TaskStatus&#10;- Add reference on user in ProjectTask" />
     <MESSAGE value="Add application part into solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add application part into solution" />
+    <MESSAGE value="Add DbContext and History of changes tasks status&#10;&#10;Add:&#10;- ChangeOfTaskStatusConfiguration&#10;- ChangeOfTaskStatusEntity&#10;- ProjectManagementSystemSQLiteDbContext&#10;Refactoring Db Entities" />
+    <MESSAGE value="Add Db Initial Migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Db Initial Migration" />
   </component>
 </project>

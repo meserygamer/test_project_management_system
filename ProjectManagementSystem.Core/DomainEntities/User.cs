@@ -28,6 +28,11 @@ public class User
     public string Email { get; set; } = null!;
 
     /// <summary>
+    /// User role in system
+    /// </summary>
+    public UserRole Role { get; set; }
+
+    /// <summary>
     /// Login of user
     /// </summary>
     public string Login { get; set; } = null!;
