@@ -1,7 +1,7 @@
 using ProjectManagementSystem.Application.Services;
 using ProjectManagementSystem.Core.DomainEntities;
 
-namespace ProjectManagementSystem.ConsoleApp;
+namespace ProjectManagementSystem.ConsoleApp.Components;
 
 public class UserAuthenticator
 {

@@ -77,6 +77,26 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
                     b.HasIndex("TaskStatusId");
 
                     b.ToTable("ProjectTasks", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Написать маппер из класса UserEntity (Database) в User (Core)",
+                            ResponsibleUserId = 1,
+                            StartTime = new DateTime(2024, 9, 2, 3, 16, 52, 569, DateTimeKind.Local).AddTicks(25),
+                            TaskStatusId = 1,
+                            Title = "Написать мапперы для пользователя"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Написать класс UserEntity отображающий пользователя в БД и конфигурацию UserConfiguration",
+                            ResponsibleUserId = 1,
+                            StartTime = new DateTime(2024, 9, 2, 0, 0, 0, 0, DateTimeKind.Local),
+                            TaskStatusId = 2,
+                            Title = "Написать сущность и конфигурацию для хранения пользователей"
+                        });
                 });
 
             modelBuilder.Entity("ProjectManagementSystem.SQLiteDb.Entities.TaskStatusEntity", b =>
@@ -87,11 +107,39 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("TaskStatuses", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Title = "Не в работе"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Title = "В работе"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Title = "Заблокировано"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Title = "Готово"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Title = "Удалено"
+                        });
                 });
 
             modelBuilder.Entity("ProjectManagementSystem.SQLiteDb.Entities.UserEntity", b =>
@@ -140,6 +188,19 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
                     b.HasIndex("UserRoleId");
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "test@mail.com",
+                            HashedPassword = "$2a$11$BS71wMsMq7URQ8UQbbBcMOWMBrc9.0MO2Wm8QhUtmJFLqhZqtBjJC",
+                            Login = "Employee",
+                            Name = "Работник",
+                            Patronymic = "Работникович",
+                            Surname = "Работников",
+                            UserRoleId = 2
+                        });
                 });
 
             modelBuilder.Entity("ProjectManagementSystem.SQLiteDb.Entities.UserRoleEntity", b =>
@@ -155,6 +216,18 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Title = "Управляющий"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Title = "Обычный сотрудник"
+                        });
                 });
 
             modelBuilder.Entity("ProjectManagementSystem.SQLiteDb.Entities.ChangeOfTaskStatusEntity", b =>
