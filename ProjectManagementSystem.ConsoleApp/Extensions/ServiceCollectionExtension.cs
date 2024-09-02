@@ -1,6 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using ProjectManagementSystem.Application.Interfaces;
 using ProjectManagementSystem.Application.Services;
+using ProjectManagementSystem.ConsoleApp.Components.SystemMenu;
+using ProjectManagementSystem.ConsoleApp.Components.SystemMenu.MenuPages;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Core.RepositoryInterfaces;
 using ProjectManagementSystem.Infrastructure.HashService;
@@ -48,6 +50,19 @@ public static class ServiceCollectionExtension
         return serviceCollection;
     }
 
+    public static IServiceCollection AddMenuPages(this IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddSingleton<TaskListOrdinaryEmployeeMenuPage>();
+        return serviceCollection;
+    }
+
+    public static IServiceCollection AddDtos(this IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddSingleton<SystemMenuPagesDTO>();
+        return serviceCollection;
+    }
+
     private static ProjectManagementSystemSQLiteDbContext CreateSqLiteDbContext() =>
         new ProjectManagementSystemSQLiteDbContext();
+    
 }
