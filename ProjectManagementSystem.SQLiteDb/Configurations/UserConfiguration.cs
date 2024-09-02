@@ -12,7 +12,6 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
             .HasKey(u => u.Id);
         
         builder.Property(u => u.Id)
-            .IsRequired()
             .ValueGeneratedOnAdd();
         
         builder.Property(u => u.Name)
@@ -50,5 +49,17 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
         builder.HasIndex(u => u.Login)
             .HasDatabaseName("LoginIndex")
             .IsUnique();
+
+        builder.HasData(new UserEntity
+        {
+            Id = 1,
+            Login = "Employee",
+            HashedPassword = "$2a$11$BS71wMsMq7URQ8UQbbBcMOWMBrc9.0MO2Wm8QhUtmJFLqhZqtBjJC",
+            Name = "Работник",
+            Surname = "Работников",
+            Patronymic = "Работникович",
+            Email = "test@mail.com",
+            UserRoleId = 2
+        });
     }
 }

@@ -12,8 +12,7 @@ public class ChangeOfTaskStatusConfiguration : IEntityTypeConfiguration<ChangeOf
             .HasKey(c => c.Id);
 
         builder.Property(c => c.Id)
-            .ValueGeneratedOnAdd()
-            .IsRequired();
+            .ValueGeneratedOnAdd();
         
         builder.Property(c => c.TaskId)
             .IsRequired();

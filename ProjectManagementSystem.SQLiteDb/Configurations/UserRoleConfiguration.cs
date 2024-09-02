@@ -12,7 +12,6 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRoleEntity>
             .HasKey(ur => ur.Id);
 
         builder.Property(ur => ur.Id)
-            .IsRequired()
             .ValueGeneratedOnAdd();
 
         builder.Property(ur => ur.Title)
@@ -23,8 +22,8 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRoleEntity>
             .HasForeignKey(u => u.UserRoleId);
         
         builder.HasData(
-            new UserRoleEntity {Title = "Управляющий"},
-            new UserRoleEntity {Title = "Обычный сотрудник"}
+            new UserRoleEntity { Id = 1, Title = "Управляющий" },
+            new UserRoleEntity { Id = 2, Title = "Обычный сотрудник" }
             );
     }
 }

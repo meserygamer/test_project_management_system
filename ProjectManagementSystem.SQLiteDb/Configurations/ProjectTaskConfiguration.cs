@@ -12,7 +12,6 @@ public class ProjectTaskConfiguration : IEntityTypeConfiguration<ProjectTaskEnti
             .HasKey(pt => pt.Id);
 
         builder.Property(pt => pt.Id)
-            .IsRequired()
             .ValueGeneratedOnAdd();
 
         builder.Property(pt => pt.Title)
@@ -37,5 +36,23 @@ public class ProjectTaskConfiguration : IEntityTypeConfiguration<ProjectTaskEnti
         builder.HasOne(pt => pt.ResponsibleUser)
             .WithMany(u => u.Tasks)
             .HasForeignKey(pt => pt.ResponsibleUserId);
+
+        builder.HasData(new ProjectTaskEntity
+        {
+            Id = 1,
+            Title = "Написать мапперы для пользователя",
+            Description = "Написать маппер из класса UserEntity (Database) в User (Core)",
+            StartTime = DateTime.Now,
+            ResponsibleUserId = 1,
+            TaskStatusId = 1
+        }, new ProjectTaskEntity
+        {
+            Id = 2,
+            Title = "Написать сущность и конфигурацию для хранения пользователей",
+            Description = "Написать класс UserEntity отображающий пользователя в БД и конфигурацию UserConfiguration",
+            StartTime = DateTime.Today,
+            ResponsibleUserId = 1,
+            TaskStatusId = 2
+        });
     }
 }
