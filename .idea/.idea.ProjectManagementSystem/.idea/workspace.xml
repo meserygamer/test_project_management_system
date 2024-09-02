@@ -7,18 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses">
+    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/dataSources/119fd6d6-4512-4559-8f2a-e699b0bebdeb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/dataSources/119fd6d6-4512-4559-8f2a-e699b0bebdeb/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UserAuthenticator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/UserAuthenticator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/BaseMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/MenuFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/OrdinaryEmployeeMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/SupervisorMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SQLiteUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/BaseMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/BaseMenuPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenuPagesDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenuPagesDTO.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +38,14 @@
     &quot;assignee&quot;: &quot;meserygamer&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/meserygamer/test_project_management_system&quot;,
-    &quot;accountId&quot;: &quot;098be5c3-060a-4fbf-9833-4937ae55f684&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/meserygamer/test_project_management_system",
+    "accountId": "15e9bd57-31e4-4710-b260-f4f4b3c85eb5"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/DomainEntities/User.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/ChangeOfTaskStatusConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/ChangeOfTaskStatusConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/ProjectTaskConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/TaskStatusConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/UserConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/UserRoleConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/4c/4bc41edf/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -92,9 +79,9 @@
       &quot;sqlite&quot;
     ],
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\meser\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\kiril\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -134,7 +121,8 @@
       <workItem from="1725108248436" duration="1837000" />
       <workItem from="1725190341520" duration="9647000" />
       <workItem from="1725224985481" duration="12370000" />
-      <workItem from="1725271553532" duration="693000" />
+      <workItem from="1725271553532" duration="7931000" />
+      <workItem from="1725303285879" duration="4732000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -240,7 +228,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725272044042</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Move Menus and UserAuthenticator into components folder&#10;&#10;Moved into components:&#10;- UserAuthenticator.cs&#10;- BaseSystemMenu.cs&#10;- OrdinaryEmployeeSystemMenu.cs&#10;- SupervisorSystemMenu.cs&#10;- SystemMenuFactory.cs">
+      <option name="closed" value="true" />
+      <created>1725272334958</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725272334958</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add ProjectTaskRepository and TaskService&#10;&#10;Add:&#10;- MapperProjectTaskEntityToProjectTaskWithStatus.cs&#10;- IProjectTaskRepository.cs&#10;- SqLiteProjectTaskRepository.cs&#10;- TaskService&#10;Change:&#10;- updated ServiceCollectionExtension.cs&#10;- renamed SqLiteUserRepository.cs">
+      <option name="closed" value="true" />
+      <created>1725272600930</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725272600930</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add ProjectTaskRepository and TaskService&#10;&#10;Add:&#10;- MapperProjectTaskEntityToProjectTaskWithStatus.cs&#10;- IProjectTaskRepository.cs&#10;- SqLiteProjectTaskRepository.cs&#10;- TaskService&#10;Change:&#10;- updated ServiceCollectionExtension.cs&#10;- renamed SqLiteUserRepository.cs&#10;- add fullname property into User.cs">
+      <option name="closed" value="true" />
+      <created>1725272649498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725272649498</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +287,9 @@
     <MESSAGE value="Add async in methods and realization to UserRepository" />
     <MESSAGE value="Change type of TaskStatus to class from enum" />
     <MESSAGE value="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses" />
+    <MESSAGE value="Move Menus and UserAuthenticator into components folder&#10;&#10;Moved into components:&#10;- UserAuthenticator.cs&#10;- BaseSystemMenu.cs&#10;- OrdinaryEmployeeSystemMenu.cs&#10;- SupervisorSystemMenu.cs&#10;- SystemMenuFactory.cs" />
+    <MESSAGE value="Add ProjectTaskRepository and TaskService&#10;&#10;Add:&#10;- MapperProjectTaskEntityToProjectTaskWithStatus.cs&#10;- IProjectTaskRepository.cs&#10;- SqLiteProjectTaskRepository.cs&#10;- TaskService&#10;Change:&#10;- updated ServiceCollectionExtension.cs&#10;- renamed SqLiteUserRepository.cs" />
+    <MESSAGE value="Add ProjectTaskRepository and TaskService&#10;&#10;Add:&#10;- MapperProjectTaskEntityToProjectTaskWithStatus.cs&#10;- IProjectTaskRepository.cs&#10;- SqLiteProjectTaskRepository.cs&#10;- TaskService&#10;Change:&#10;- updated ServiceCollectionExtension.cs&#10;- renamed SqLiteUserRepository.cs&#10;- add fullname property into User.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ProjectTaskRepository and TaskService&#10;&#10;Add:&#10;- MapperProjectTaskEntityToProjectTaskWithStatus.cs&#10;- IProjectTaskRepository.cs&#10;- SqLiteProjectTaskRepository.cs&#10;- TaskService&#10;Change:&#10;- updated ServiceCollectionExtension.cs&#10;- renamed SqLiteUserRepository.cs&#10;- add fullname property into User.cs" />
   </component>
 </project>

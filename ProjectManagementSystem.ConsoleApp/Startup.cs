@@ -13,11 +13,13 @@ public static class Startup
         IServiceCollection services = new ServiceCollection()
             .AddAppServices()
             .AddInfrastructure()
-            .AddTransient<UserAuthenticator>()
-            .AddSingleton<SystemMenuFactory>()
             .AddSqLiteDbContextFactory()
             .AddRepositories()
-            .AddMappersForDb();
+            .AddMappersForDb()
+            .AddMenuPages()
+            .AddDtos()
+            .AddTransient<UserAuthenticator>()
+            .AddSingleton<SystemMenuFactory>();
 
         ServiceProvider serviceProvider = services.BuildServiceProvider();
         UserAuthenticator userAuthenticator = serviceProvider.GetService<UserAuthenticator>() 
@@ -30,7 +32,7 @@ public static class Startup
         SystemMenuFactory menuFactory = serviceProvider.GetService<SystemMenuFactory>() 
                                         ?? throw new SystemException("SystemMenuFactory in DICont was not found");
         await menuFactory.CreateMenu(user)
-            .EnterInSystemAsync();
+            .OpenMenuAsync();
         
         Console.ReadKey();
     }
