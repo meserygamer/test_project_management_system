@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using ProjectManagementSystem.Application.Interfaces;
+using ProjectManagementSystem.Application.Services;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Core.RepositoryInterfaces;
 using ProjectManagementSystem.Infrastructure.HashService;
@@ -12,6 +13,13 @@ namespace ProjectManagementSystem.ConsoleApp.Extensions;
 
 public static class ServiceCollectionExtension
 {
+    public static IServiceCollection AddAppServices(this IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddSingleton<UserAuthenticationService>();
+        serviceCollection.AddSingleton<TaskService>();
+        return serviceCollection;
+    }
+    
     public static IServiceCollection AddInfrastructure(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddSingleton<IPasswordHasher, PasswordHasher>();
@@ -26,13 +34,17 @@ public static class ServiceCollectionExtension
 
     public static IServiceCollection AddRepositories(this IServiceCollection serviceCollection)
     {
-        serviceCollection.AddTransient<IUserRepository, SQLiteUserRepository>();
+        serviceCollection.AddTransient<IUserRepository, SqLiteUserRepository>();
+        serviceCollection.AddTransient<IProjectTaskRepository, SqLiteProjectTaskRepository>();
         return serviceCollection;
     }
 
     public static IServiceCollection AddMappersForDb(this IServiceCollection serviceCollection)
     {
-        serviceCollection.AddSingleton<IMapper<UserEntity, User>, MapperUserEntityToUser>();
+        serviceCollection
+            .AddSingleton<IMapper<UserEntity, User>, MapperUserEntityToUser>();
+        serviceCollection
+            .AddSingleton<IMapper<ProjectTaskEntity, ProjectTask>, MapperProjectTaskEntityToProjectTaskWithStatus>();
         return serviceCollection;
     }
 
