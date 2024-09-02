@@ -7,11 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="">
+    <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/TaskStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/TaskStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/TaskStatusConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/TaskStatusConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/UserRoleConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/UserRoleConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UserAuthenticator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/UserAuthenticator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/BaseMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/MenuFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/OrdinaryEmployeeMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/UsersMenus/SupervisorMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SQLiteUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteUserRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +49,21 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/DomainEntities/TaskStatus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/DomainEntities/User.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/ChangeOfTaskStatusConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/ChangeOfTaskStatusConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/ProjectTaskConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/TaskStatusConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/UserConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Configurations/UserRoleConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -70,6 +88,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ],
     &quot;rider.external.source.directories&quot;: [
       &quot;C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
       &quot;C:\\Users\\meser\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
@@ -112,7 +133,8 @@
       <workItem from="1725107768935" duration="45000" />
       <workItem from="1725108248436" duration="1837000" />
       <workItem from="1725190341520" duration="9647000" />
-      <workItem from="1725224985481" duration="2949000" />
+      <workItem from="1725224985481" duration="12370000" />
+      <workItem from="1725271553532" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -202,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725201006443</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Change type of TaskStatus to class from enum">
+      <option name="closed" value="true" />
+      <created>1725227978391</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725227978391</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses">
+      <option name="closed" value="true" />
+      <created>1725272044041</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725272044042</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +273,8 @@
     <MESSAGE value="Add extensions for IServiceCollection" />
     <MESSAGE value="Add IMapper and MapperUserEntityToUser" />
     <MESSAGE value="Add async in methods and realization to UserRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add async in methods and realization to UserRepository" />
+    <MESSAGE value="Change type of TaskStatus to class from enum" />
+    <MESSAGE value="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add basic data in DataBase&#10;&#10;Add in database:&#10;- basic user&#10;- basic user roles &#10;- basic tasks&#10;- basic task statuses" />
   </component>
 </project>

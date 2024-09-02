@@ -41,4 +41,6 @@ public class User
     /// Hashed password of user
     /// </summary>
     public string HashedPassword { get; set; } = null!;
+
+    public string FullName => $"{Surname} {Name} {Patronymic}";
 }

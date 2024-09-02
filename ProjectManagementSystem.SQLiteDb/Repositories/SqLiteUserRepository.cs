@@ -6,12 +6,12 @@ using ProjectManagementSystem.SQLiteDb.Mappers;
 
 namespace ProjectManagementSystem.SQLiteDb.Repositories;
 
-public class SQLiteUserRepository : IUserRepository
+public class SqLiteUserRepository : IUserRepository
 {
     private readonly Func<ProjectManagementSystemSQLiteDbContext> _dbContextFactory;
     private readonly IMapper<UserEntity, User> _mapperUserToCore;
     
-    public SQLiteUserRepository(Func<ProjectManagementSystemSQLiteDbContext> dbContextFactory,
+    public SqLiteUserRepository(Func<ProjectManagementSystemSQLiteDbContext> dbContextFactory,
         IMapper<UserEntity, User> mapperToCore)
     {
         _dbContextFactory = dbContextFactory ?? throw new ArgumentNullException();
