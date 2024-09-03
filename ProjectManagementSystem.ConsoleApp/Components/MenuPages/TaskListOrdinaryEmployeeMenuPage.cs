@@ -39,7 +39,7 @@ public class TaskListOrdinaryEmployeeMenuPage : BaseMenuPage
     private async Task PrintPageAsync()
     {
         Console.Clear();
-        Console.WriteLine($"Здравствуйте сотрудник, {base.User.FullName}\n");
+        Console.WriteLine($"Здравствуйте сотрудник, {base.User!.FullName}\n");
         await PrintUsersTasksAsync();
         Console.WriteLine("Для редактирования задачи введите её номер:");
     }

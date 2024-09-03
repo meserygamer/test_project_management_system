@@ -6,13 +6,21 @@ public class SystemMenuPagesDTO
 {
     public SystemMenuPagesDTO(
         TaskListOrdinaryEmployeeMenuPage taskListOrdinaryEmployeeMenuPage,
-        ChangeTaskDataOrdinaryEmployeeMenuPage changeTaskDataOrdinaryEmployeeMenuPage
+        ChangeTaskDataOrdinaryEmployeeMenuPage changeTaskDataOrdinaryEmployeeMenuPage,
+        MainSupervisorMenuPage mainSupervisorMenuPage,
+        RegistrationNewUserMenuPage registrationNewUserMenuPage,
+        CreateNewProjectTaskMenuPage createNewProjectTaskMenuPage,
+        AssignProjectTaskToUserMenuPage assignProjectTaskToUserMenuPage
         )
     {
         MenuPages = new Dictionary<Type, BaseMenuPage>
         {
             { typeof(TaskListOrdinaryEmployeeMenuPage), taskListOrdinaryEmployeeMenuPage },
-            { typeof(ChangeTaskDataOrdinaryEmployeeMenuPage), changeTaskDataOrdinaryEmployeeMenuPage }
+            { typeof(ChangeTaskDataOrdinaryEmployeeMenuPage), changeTaskDataOrdinaryEmployeeMenuPage },
+            { typeof(MainSupervisorMenuPage), mainSupervisorMenuPage },
+            { typeof(RegistrationNewUserMenuPage), registrationNewUserMenuPage },
+            { typeof(CreateNewProjectTaskMenuPage), createNewProjectTaskMenuPage },
+            { typeof(AssignProjectTaskToUserMenuPage), assignProjectTaskToUserMenuPage }
         };
     }
 

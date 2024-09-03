@@ -36,4 +36,24 @@ public class SqLiteUserRepository : IUserRepository
             ? null 
             : _mapperUserToCore.MapToDestination(userFromDb);
     }
+
+    public async Task<bool> TryAddUserAsync(User newUser)
+    {
+        UserEntity newUserEntity = _mapperUserToCore.MapToSource(newUser);
+        try
+        {
+            using (ProjectManagementSystemSQLiteDbContext db = _dbContextFactory.Invoke())
+            {
+                await db.Users.AddAsync(newUserEntity);
+                await db.SaveChangesAsync();
+            }
+
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+        
+    }
 }

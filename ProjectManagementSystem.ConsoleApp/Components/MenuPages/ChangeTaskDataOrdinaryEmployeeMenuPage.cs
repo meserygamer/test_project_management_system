@@ -32,9 +32,15 @@ public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
         SetChangeTaskIdFromBundle();
         
         await PrintTaskAndPossibleChangesAsync();
-        int? userChoice = await GetUserChoiceFromConsoleAsync(PrintInputNumberOfStatusErrorAsync);
+        int? userChoice = await ConsoleExtension.GetOptionNumberFromConsoleWithDenyAsync(
+                PrintInputNumberOfStatusErrorAsync,
+                ["n", "N"],
+                1,
+                _taskStatuses!.Count
+                );
+        
         if (userChoice is not null)
-            _taskService.UpdateStatusForTask(_changeTaskId, _taskStatuses![(int)userChoice - 1].Id);
+            await _taskService.UpdateStatusForTaskAsync(_changeTaskId, _taskStatuses![(int)userChoice - 1].Id);
                 
         await base.ParentMenu.ChangePageWithOpenAsync(
             typeof(TaskListOrdinaryEmployeeMenuPage),
@@ -86,6 +92,7 @@ public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
         Console.WriteLine();
     }
     
+    /*
     private async Task<int?> GetUserChoiceFromConsoleAsync(Func<Task> inputErrorHandler)
     {
         int numberTaskForEditing = 0;
@@ -105,4 +112,6 @@ public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
 
         return numberTaskForEditing;
     }
+    */
+    
 }

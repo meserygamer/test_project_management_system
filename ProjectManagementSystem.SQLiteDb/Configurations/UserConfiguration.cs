@@ -50,16 +50,29 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
             .HasDatabaseName("LoginIndex")
             .IsUnique();
 
-        builder.HasData(new UserEntity
-        {
-            Id = 1,
-            Login = "Employee",
-            HashedPassword = "$2a$11$BS71wMsMq7URQ8UQbbBcMOWMBrc9.0MO2Wm8QhUtmJFLqhZqtBjJC",
-            Name = "Работник",
-            Surname = "Работников",
-            Patronymic = "Работникович",
-            Email = "test@mail.com",
-            UserRoleId = 2
-        });
+        builder.HasData(
+            new UserEntity 
+            { 
+                Id = 1,
+                Login = "Employee",
+                HashedPassword = "$2a$11$BS71wMsMq7URQ8UQbbBcMOWMBrc9.0MO2Wm8QhUtmJFLqhZqtBjJC",
+                Name = "Работник",
+                Surname = "Работников",
+                Patronymic = "Работникович",
+                Email = "test@mail.com",
+                UserRoleId = 2
+            },
+            new UserEntity()
+            {
+                Id = 2,
+                Login = "Supervisor",
+                HashedPassword = "$2a$11$BS71wMsMq7URQ8UQbbBcMOWMBrc9.0MO2Wm8QhUtmJFLqhZqtBjJC",
+                Name = "Управляющий",
+                Surname = "Управ",
+                Patronymic = "Управляющевич",
+                Email = "test@mail.com",
+                UserRoleId = 1
+            }
+            );
     }
 }

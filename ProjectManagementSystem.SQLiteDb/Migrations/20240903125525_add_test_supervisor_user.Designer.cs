@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectManagementSystem.SQLiteDb;
 
@@ -10,9 +11,11 @@ using ProjectManagementSystem.SQLiteDb;
 namespace ProjectManagementSystem.SQLiteDb.Migrations
 {
     [DbContext(typeof(ProjectManagementSystemSQLiteDbContext))]
-    partial class ProjectManagmentSystemSQLiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240903125525_add_test_supervisor_user")]
+    partial class add_test_supervisor_user
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");

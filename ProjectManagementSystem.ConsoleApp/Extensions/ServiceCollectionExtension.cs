@@ -21,6 +21,7 @@ public static class ServiceCollectionExtension
         serviceCollection.AddSingleton<UserAuthenticationService>();
         serviceCollection.AddSingleton<TaskService>();
         serviceCollection.AddSingleton<TaskStatusService>();
+        serviceCollection.AddSingleton<UserService>();
         return serviceCollection;
     }
     
@@ -59,6 +60,10 @@ public static class ServiceCollectionExtension
     {
         serviceCollection.AddSingleton<TaskListOrdinaryEmployeeMenuPage>();
         serviceCollection.AddSingleton<ChangeTaskDataOrdinaryEmployeeMenuPage>();
+        serviceCollection.AddSingleton<MainSupervisorMenuPage>();
+        serviceCollection.AddSingleton<RegistrationNewUserMenuPage>();
+        serviceCollection.AddSingleton<CreateNewProjectTaskMenuPage>();
+        serviceCollection.AddSingleton<AssignProjectTaskToUserMenuPage>();
         return serviceCollection;
     }
 

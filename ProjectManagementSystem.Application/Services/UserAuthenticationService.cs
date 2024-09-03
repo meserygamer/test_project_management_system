@@ -22,4 +22,7 @@ public class UserAuthenticationService
         string? intendedUserHashedPassword = intendedUser?.HashedPassword;
         return _passwordHasher.VerifyPassword(password, intendedUserHashedPassword) ? intendedUser : null;
     }
+
+    public string HashPassword(string password) 
+        => _passwordHasher.HashPassword(password);
 }

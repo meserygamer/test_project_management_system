@@ -31,6 +31,7 @@ public class MapperUserEntityToUser : IMapper<UserEntity, User>
             Name = destination.Name,
             Surname = destination.Surname,
             Patronymic = destination.Patronymic,
+            UserRoleId = (int)destination.Role,
             ChangesTasksStatus = new List<ChangeOfTaskStatusEntity>(),
             Tasks = new List<ProjectTaskEntity>()
         };

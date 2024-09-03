@@ -11,7 +11,7 @@ public class SystemMenuFactory
     {
         _menusOfRoles = new() 
         { 
-            { UserRole.Supervisor, user => new Menu.SystemMenu(user, systemMenuPagesDto, null) }, 
+            { UserRole.Supervisor, user => new Menu.SystemMenu(user, systemMenuPagesDto, typeof(MainSupervisorMenuPage)) }, 
             { UserRole.OrdinaryEmployee, user => new Menu.SystemMenu(user, systemMenuPagesDto, typeof(TaskListOrdinaryEmployeeMenuPage)) } 
         };
     }
