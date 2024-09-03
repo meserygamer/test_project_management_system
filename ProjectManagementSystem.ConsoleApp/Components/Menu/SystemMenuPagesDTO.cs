@@ -1,6 +1,6 @@
-using ProjectManagementSystem.ConsoleApp.Components.SystemMenu.MenuPages;
+using ProjectManagementSystem.ConsoleApp.Components.MenuPages;
 
-namespace ProjectManagementSystem.ConsoleApp.Components.SystemMenu;
+namespace ProjectManagementSystem.ConsoleApp.Components.Menu;
 
 public class SystemMenuPagesDTO
 {

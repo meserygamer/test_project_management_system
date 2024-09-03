@@ -1,8 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using ProjectManagementSystem.Application.Interfaces;
 using ProjectManagementSystem.Application.Services;
-using ProjectManagementSystem.ConsoleApp.Components.SystemMenu;
-using ProjectManagementSystem.ConsoleApp.Components.SystemMenu.MenuPages;
+using ProjectManagementSystem.ConsoleApp.Components.Menu;
+using ProjectManagementSystem.ConsoleApp.Components.MenuPages;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Core.RepositoryInterfaces;
 using ProjectManagementSystem.Infrastructure.HashService;

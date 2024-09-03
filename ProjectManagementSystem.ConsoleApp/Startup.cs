@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ProjectManagementSystem.ConsoleApp.Components;
-using ProjectManagementSystem.ConsoleApp.Components.SystemMenu;
+using ProjectManagementSystem.ConsoleApp.Components.Menu;
 using ProjectManagementSystem.ConsoleApp.Extensions;
 using ProjectManagementSystem.Core.DomainEntities;
 

@@ -4,7 +4,7 @@ using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Infrastructure;
 using TaskStatus = ProjectManagementSystem.Core.DomainEntities.TaskStatus;
 
-namespace ProjectManagementSystem.ConsoleApp.Components.SystemMenu.MenuPages;
+namespace ProjectManagementSystem.ConsoleApp.Components.MenuPages;
 
 public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
 {

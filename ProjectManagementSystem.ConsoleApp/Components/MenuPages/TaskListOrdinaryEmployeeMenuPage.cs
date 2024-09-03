@@ -3,7 +3,7 @@ using ProjectManagementSystem.ConsoleApp.Extensions;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Infrastructure;
 
-namespace ProjectManagementSystem.ConsoleApp.Components.SystemMenu.MenuPages;
+namespace ProjectManagementSystem.ConsoleApp.Components.MenuPages;
 
 public class TaskListOrdinaryEmployeeMenuPage : BaseMenuPage
 {
