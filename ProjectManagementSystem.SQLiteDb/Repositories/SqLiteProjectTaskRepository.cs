@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Core.RepositoryInterfaces;
 using ProjectManagementSystem.SQLiteDb.Entities;
@@ -28,5 +29,36 @@ public class SqLiteProjectTaskRepository : IProjectTaskRepository
                 .ToListAsync();
             return tasksFromDb.ConvertAll<ProjectTask>(pt => _mapperProjectTaskToCore.MapToDestination(pt));
         }
+    }
+
+    public async Task<ProjectTask?> GetTaskByIdAsync(int taskId)
+    {
+        using (ProjectManagementSystemSQLiteDbContext dbContext = _dbContextFactory.Invoke())
+        {
+            ProjectTaskEntity? taskFromDb = await dbContext.ProjectTasks
+                .Include(pt => pt.TaskStatus)
+                .FirstOrDefaultAsync(pt => pt.Id == taskId);
+            return taskFromDb is not null ? _mapperProjectTaskToCore.MapToDestination(taskFromDb) : null;
+        }
+    }
+
+    public async Task<bool> UpdateTaskAsync(ProjectTask newTaskData)
+    {
+        ProjectTaskEntity entityOnUpdate = _mapperProjectTaskToCore.MapToSource(newTaskData);
+        try
+        {
+            using (ProjectManagementSystemSQLiteDbContext dbContext = _dbContextFactory.Invoke())
+            {
+                EntityEntry<ProjectTaskEntity> entity =  dbContext.ProjectTasks.Attach(entityOnUpdate);
+                entity.State = EntityState.Modified;
+                await dbContext.SaveChangesAsync();
+            }
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+        
     }
 }

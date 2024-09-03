@@ -8,7 +8,7 @@ public class MapperProjectTaskEntityToProjectTaskWithStatus : IMapper<ProjectTas
 {
     public ProjectTask MapToDestination(ProjectTaskEntity source)
     {
-        return new ProjectTask
+        ProjectTask task = new ProjectTask
         {
             Id = source.Id,
             Title = source.Title,
@@ -16,10 +16,17 @@ public class MapperProjectTaskEntityToProjectTaskWithStatus : IMapper<ProjectTas
             StartTime = source.StartTime,
             TaskStatus = new TaskStatus
             {
-                Id = source.TaskStatus.Id,
-                Title = source.TaskStatus.Title
+                Id = source.TaskStatusId
+            },
+            ResponsibleUser = new User()
+            {
+                Id = source.ResponsibleUserId
             }
         };
+        if (source.TaskStatus is not null)
+            task.TaskStatus.Title = source.TaskStatus.Title;
+
+        return task;
     }
 
     public ProjectTaskEntity MapToSource(ProjectTask destination)
@@ -30,11 +37,8 @@ public class MapperProjectTaskEntityToProjectTaskWithStatus : IMapper<ProjectTas
             Title = destination.Title,
             Description = destination.Description,
             StartTime = destination.StartTime,
-            TaskStatus = new TaskStatusEntity()
-            {
-                Id = destination.TaskStatus.Id,
-                Title = destination.TaskStatus.Title
-            }
+            TaskStatusId = destination.TaskStatus.Id,
+            ResponsibleUserId = destination.ResponsibleUser.Id
         };
     }
 }
