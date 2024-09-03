@@ -8,13 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/dataSources/119fd6d6-4512-4559-8f2a-e699b0bebdeb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/dataSources/119fd6d6-4512-4559-8f2a-e699b0bebdeb/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/BaseMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/BaseMenuPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/TaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/TaskService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenuPagesDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/SystemMenuPagesDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +40,15 @@
     &quot;assignee&quot;: &quot;meserygamer&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/meserygamer/test_project_management_system",
-    "accountId": "15e9bd57-31e4-4710-b260-f4f4b3c85eb5"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/meserygamer/test_project_management_system&quot;,
+    &quot;accountId&quot;: &quot;15e9bd57-31e4-4710-b260-f4f4b3c85eb5&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/4c/4bc41edf/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/2aade6beb02ea367fd97c4070a4198802fe61c03/src/libraries/System.Console/src/System/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/2aade6beb02ea367fd97c4070a4198802fe61c03/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/List.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -61,37 +64,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.ProjectManagementSystem.ConsoleApp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TestFeatures&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.ProjectManagementSystem.ConsoleApp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.29181817",
+    "git-widget-placeholder": "TestFeatures",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\kiril\\AppData\\Local\\Symbols\\src&quot;
+    "rider.external.source.directories": [
+      "C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\kiril\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\kiril\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="ProjectManagementSystem.ConsoleApp" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/bin/Debug/net8.0/ProjectManagementSystem.ConsoleApp.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/bin/Debug/net8.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/ProjectManagementSystem.ConsoleApp.csproj" />
@@ -99,7 +103,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net8.0" />
       <method v="2">
         <option name="Build" />
       </method>

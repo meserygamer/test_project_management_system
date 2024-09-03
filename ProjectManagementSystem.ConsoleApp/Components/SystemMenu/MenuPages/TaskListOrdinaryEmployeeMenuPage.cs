@@ -41,7 +41,7 @@ public class TaskListOrdinaryEmployeeMenuPage : BaseMenuPage
         Console.Clear();
         Console.WriteLine($"Здравствуйте сотрудник, {base.User.FullName}\n");
         await PrintUsersTasksAsync();
-        Console.WriteLine("Для редактирования задачи введите её номер:\n");
+        Console.WriteLine("Для редактирования задачи введите её номер:");
     }
 
     private async Task PrintInputNumberOfTaskErrorAsync()
@@ -50,7 +50,7 @@ public class TaskListOrdinaryEmployeeMenuPage : BaseMenuPage
         Console.WriteLine($"Здравствуйте сотрудник, {base.User.FullName}\n");
         await PrintUsersTasksAsync(false);
         Console.WriteLine("Номер задачи введён некорректно!");
-        Console.WriteLine("Для редактирования задачи введите её номер:\n");
+        Console.WriteLine("Для редактирования задачи введите её номер:");
     }
 
     private async Task<int> GetTaskNumberFromConsoleAsync(Func<Task> inputErrorHandler)
@@ -61,8 +61,9 @@ public class TaskListOrdinaryEmployeeMenuPage : BaseMenuPage
             if (ConsoleExtension.TryGetInt32(out numberTaskForEditing)
                 && _usersProjectTasks.Find(pt => pt.Id == numberTaskForEditing) is not null) 
                 break;
-            else
-                await inputErrorHandler?.Invoke();
+            
+            if(inputErrorHandler is not null) 
+                await inputErrorHandler.Invoke();
         }
 
         return numberTaskForEditing;
@@ -73,16 +74,10 @@ public class TaskListOrdinaryEmployeeMenuPage : BaseMenuPage
         Console.WriteLine("Список ваших задач:\n");
         
         if(isNeedLoadTasks) 
-            _usersProjectTasks = await _taskService.GetAllUsersTaskAsync(User.Id);
+            _usersProjectTasks = await _taskService.GetAllUsersTaskAsync(base.User!.Id);
         
         foreach (var task in _usersProjectTasks) 
-            Console.WriteLine(
-                $"Номер задачи: {task.Id}\n" + 
-                $"Заголовок: {task.Title}\n" + 
-                $"Описание: {task.Description}\n" + 
-                $"Дата начала: {task.StartTime}\n" + 
-                $"Статус: {task.TaskStatus.Title}\n"
-            );
+            Console.WriteLine(task.ProjectTaskInfo);
     }
 
     private Bundle CreateBundleWithNumberOfChosenTask(int numberOfTask)
