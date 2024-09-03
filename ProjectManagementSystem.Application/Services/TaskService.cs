@@ -14,4 +14,15 @@ public class TaskService
 
     public async Task<List<ProjectTask>> GetAllUsersTaskAsync(int userId) 
         => await _projectTaskRepository.GetAllUsersTasksAsync(userId);
+
+    public async Task<ProjectTask?> GetTaskByIdAsync(int taskId)
+        => await _projectTaskRepository.GetTaskByIdAsync(taskId);
+
+    public async Task<bool> UpdateStatusForTask(int taskId, int newStatusId)
+    {
+        ProjectTask task = await GetTaskByIdAsync(taskId) 
+                           ?? throw new ArgumentException($"task with id - {taskId} was not found");
+        task.TaskStatus.Id = newStatusId;
+        return await _projectTaskRepository.UpdateTaskAsync(task);
+    }
 }
