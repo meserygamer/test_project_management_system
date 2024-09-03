@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace ProjectManagementSystem.Core.DomainEntities;
 
 public class ProjectTask
@@ -31,4 +33,13 @@ public class ProjectTask
     /// Responsible for completing the task
     /// </summary>
     public User ResponsibleUser { get; set; } = null!;
+    
+    public string ProjectTaskInfo
+        => new StringBuilder()
+            .Append($"Номер задачи: {Id}\n")
+            .Append($"Заголовок: {Title}\n")
+            .Append($"Описание: {Description}\n")
+            .Append($"Дата начала: {StartTime}\n")
+            .Append($"Статус: {TaskStatus.Title}\n")
+            .ToString();
 }
