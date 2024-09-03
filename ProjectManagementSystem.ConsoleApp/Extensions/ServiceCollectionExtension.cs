@@ -10,6 +10,7 @@ using ProjectManagementSystem.SQLiteDb;
 using ProjectManagementSystem.SQLiteDb.Entities;
 using ProjectManagementSystem.SQLiteDb.Mappers;
 using ProjectManagementSystem.SQLiteDb.Repositories;
+using TaskStatus = ProjectManagementSystem.Core.DomainEntities.TaskStatus;
 
 namespace ProjectManagementSystem.ConsoleApp.Extensions;
 
@@ -19,6 +20,7 @@ public static class ServiceCollectionExtension
     {
         serviceCollection.AddSingleton<UserAuthenticationService>();
         serviceCollection.AddSingleton<TaskService>();
+        serviceCollection.AddSingleton<TaskStatusService>();
         return serviceCollection;
     }
     
@@ -38,6 +40,7 @@ public static class ServiceCollectionExtension
     {
         serviceCollection.AddTransient<IUserRepository, SqLiteUserRepository>();
         serviceCollection.AddTransient<IProjectTaskRepository, SqLiteProjectTaskRepository>();
+        serviceCollection.AddTransient<ITaskStatusRepository, SqLiteTaskStatusRepository>();
         return serviceCollection;
     }
 
@@ -47,12 +50,15 @@ public static class ServiceCollectionExtension
             .AddSingleton<IMapper<UserEntity, User>, MapperUserEntityToUser>();
         serviceCollection
             .AddSingleton<IMapper<ProjectTaskEntity, ProjectTask>, MapperProjectTaskEntityToProjectTaskWithStatus>();
+        serviceCollection
+            .AddSingleton<IMapper<TaskStatusEntity, TaskStatus>, MapperTaskStatusEntityToTaskStatus>();
         return serviceCollection;
     }
 
     public static IServiceCollection AddMenuPages(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddSingleton<TaskListOrdinaryEmployeeMenuPage>();
+        serviceCollection.AddSingleton<ChangeTaskDataOrdinaryEmployeeMenuPage>();
         return serviceCollection;
     }
 
