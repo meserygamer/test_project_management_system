@@ -1,3 +1,6 @@
+using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+
 namespace ProjectManagementSystem.ConsoleApp.Extensions;
 
 public static class ConsoleExtension
@@ -11,7 +14,24 @@ public static class ConsoleExtension
         }
         catch (Exception e)
         {
-            number = 0;
+            number = default;
+            return false;
+        }
+    }
+
+    public static bool TryGetDatetime(out DateTime dateTime)
+    {
+        try
+        {
+            dateTime = DateTime.Parse(
+                Console.ReadLine() ?? "",
+                CultureInfo.GetCultureInfo("ru-RU")
+                );
+            return true;
+        }
+        catch (Exception e)
+        {
+            dateTime = default;
             return false;
         }
     }
@@ -57,5 +77,31 @@ public static class ConsoleExtension
         }
 
         return optionNumber;
+    }
+
+    public static string GetStringFromConsoleWithValidation(
+        string messageForInput,
+        string errorMessage,
+        List<ValidationAttribute> validationAttributes,
+        bool isPrintErrors = true
+    )
+    {
+        string value;
+        List<ValidationResult> validationResults;
+        while (true)
+        {
+            Console.WriteLine(messageForInput);
+            value = Console.ReadLine() ?? string.Empty;
+            validationResults = new();
+            if (Validator.TryValidateValue(value, new ValidationContext(value), validationResults, validationAttributes))
+                break;
+            
+            Console.Clear();
+            Console.WriteLine(errorMessage);
+            if(isPrintErrors)
+                foreach (var validationResult in validationResults) 
+                    Console.WriteLine(validationResult.ErrorMessage);
+        }
+        return value;
     }
 }

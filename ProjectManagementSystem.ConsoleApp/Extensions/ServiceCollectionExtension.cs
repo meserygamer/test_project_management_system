@@ -50,7 +50,7 @@ public static class ServiceCollectionExtension
         serviceCollection
             .AddSingleton<IMapper<UserEntity, User>, MapperUserEntityToUser>();
         serviceCollection
-            .AddSingleton<IMapper<ProjectTaskEntity, ProjectTask>, MapperProjectTaskEntityToProjectTaskWithStatus>();
+            .AddSingleton<IMapper<ProjectTaskEntity, ProjectTask>, DeepMapperProjectTaskEntityToProjectTask>();
         serviceCollection
             .AddSingleton<IMapper<TaskStatusEntity, TaskStatus>, MapperTaskStatusEntityToTaskStatus>();
         return serviceCollection;

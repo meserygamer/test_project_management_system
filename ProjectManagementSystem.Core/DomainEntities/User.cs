@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace ProjectManagementSystem.Core.DomainEntities;
 
 public class User
@@ -43,4 +45,13 @@ public class User
     public string HashedPassword { get; set; } = null!;
 
     public string FullName => $"{Surname} {Name} {Patronymic}";
+    
+    public string UserInfo 
+        => new StringBuilder()
+            .Append($"Номер пользователя: {Id}\n")
+            .Append($"ФИО: {FullName}\n")
+            .Append($"Email: {Email}\n")
+            .Append($"Роль: {Role}\n")
+            .Append($"Login: {Login}\n")
+            .ToString();
 }

@@ -1,4 +1,3 @@
-using ProjectManagementSystem.Application.Interfaces;
 using ProjectManagementSystem.Core.DomainEntities;
 using ProjectManagementSystem.Core.RepositoryInterfaces;
 
@@ -12,6 +11,9 @@ public class UserService
     {
         _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
     }
+
+    public async Task<List<User>> GetAllUsersAsync()
+        => await _userRepository.GetAllUsersAsync();
 
     public async Task<bool> IsUniqueLoginAsync(string login)
         => (await _userRepository.GetUserByLoginAsync(login)) is null;

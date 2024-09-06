@@ -56,7 +56,7 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("ResponsibleUserId")
+                    b.Property<int?>("ResponsibleUserId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("StartTime")
@@ -84,7 +84,7 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
                             Id = 1,
                             Description = "Написать маппер из класса UserEntity (Database) в User (Core)",
                             ResponsibleUserId = 1,
-                            StartTime = new DateTime(2024, 9, 3, 15, 55, 24, 573, DateTimeKind.Local).AddTicks(7206),
+                            StartTime = new DateTime(2024, 9, 3, 23, 26, 32, 335, DateTimeKind.Local).AddTicks(8067),
                             TaskStatusId = 1,
                             Title = "Написать мапперы для пользователя"
                         },
@@ -272,9 +272,7 @@ namespace ProjectManagementSystem.SQLiteDb.Migrations
                 {
                     b.HasOne("ProjectManagementSystem.SQLiteDb.Entities.UserEntity", "ResponsibleUser")
                         .WithMany("Tasks")
-                        .HasForeignKey("ResponsibleUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ResponsibleUserId");
 
                     b.HasOne("ProjectManagementSystem.SQLiteDb.Entities.TaskStatusEntity", "TaskStatus")
                         .WithMany("Tasks")

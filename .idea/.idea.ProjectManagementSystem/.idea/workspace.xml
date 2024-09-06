@@ -10,18 +10,21 @@
     <list default="true" id="5a422af2-a5bc-427e-b11f-c21fa55467eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectManagementSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/TaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/TaskService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/UserAuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/UserAuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/Menu/SystemMenuFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/Menu/SystemMenuFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/Menu/SystemMenuPagesDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/Menu/SystemMenuPagesDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Application/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/AssignProjectTaskToUserMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/AssignProjectTaskToUserMenuPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/CreateNewProjectTaskMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/CreateNewProjectTaskMenuPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/RegistrationNewUserMenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/RegistrationNewUserMenuPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ConsoleExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ConsoleExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/UserConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Mappers/MapperUserEntityToUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Mappers/MapperUserEntityToUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/DomainEntities/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/ProjectTaskConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Configurations/ProjectTaskConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/ProjectTaskEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Entities/ProjectTaskEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Mappers/DeepMapperProjectTaskEntityToProjectTask.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Migrations/ProjectManagmentSystemSQLiteDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,32 +58,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/0d79e6de8dbc26a44dde336a9a680940e92e9904/src/libraries/Microsoft.Extensions.DependencyInjection/src/ServiceLookup/CallSiteFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/2aade6beb02ea367fd97c4070a4198802fe61c03/src/libraries/System.Console/src/System/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/2aade6beb02ea367fd97c4070a4198802fe61c03/src/libraries/System.Private.CoreLib/src/System/Collections/Generic/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Application/Services/TaskService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Application/Services/TaskService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/ChangeTaskDataOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Components/SystemMenu/MenuPages/TaskListOrdinaryEmployeeMenuPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.ConsoleApp/Extensions/ServiceCollectionExtension.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/DomainEntities/ProjectTask.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.Core/RepositoryInterfaces/IProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Mappers/MapperProjectTaskEntityToProjectTaskWithStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/meser/OneDrive/Рабочий стол/test_project_management_system/ProjectManagementSystem.SQLiteDb/Repositories/SqLiteProjectTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -98,7 +76,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;.NET Project.ProjectManagementSystem.ConsoleApp.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.ProjectManagementSystem.ConsoleApp.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.29181817&quot;,
     &quot;git-widget-placeholder&quot;: &quot;TestFeatures&quot;,
@@ -160,6 +138,8 @@
       <workItem from="1725271553532" duration="7931000" />
       <workItem from="1725303285879" duration="4732000" />
       <workItem from="1725353053713" duration="14498000" />
+      <workItem from="1725369878579" duration="190000" />
+      <workItem from="1725389770508" duration="10591000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -361,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725354867186</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Adding the ability to register a user for a supervisor">
+      <option name="closed" value="true" />
+      <created>1725370053712</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1725370053712</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +370,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add ProjectManagementSystem.Core into solution" />
     <MESSAGE value="Add user in system&#10;&#10;Add: &#10;- User&#10;- UserAuthenticationData&#10;- UserRole&#10;Change:&#10;- Numbering in TaskStatus&#10;- Add reference on user in ProjectTask" />
     <MESSAGE value="Add application part into solution" />
     <MESSAGE value="Add DbContext and History of changes tasks status&#10;&#10;Add:&#10;- ChangeOfTaskStatusConfiguration&#10;- ChangeOfTaskStatusEntity&#10;- ProjectManagementSystemSQLiteDbContext&#10;Refactoring Db Entities" />
@@ -407,25 +394,7 @@
     <MESSAGE value="Update TaskListOrdinaryEmployeeMenuPage.cs&#10;&#10;micro update with fix methods realization" />
     <MESSAGE value="Complete func updating task status from ordinary employee account&#10;&#10;Update:&#10;- ServiceCollectionExtension&#10;- ChangeTaskDataOrdinaryEmployeeMenuPage" />
     <MESSAGE value="Mass moving files into other directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mass moving files into other directories" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ProjectManagementSystem.ConsoleApp/Components/MenuPages/RegistrationNewUserMenuPage.cs</url>
-          <line>42</line>
-          <properties documentPath="C:\Users\meser\OneDrive\Рабочий стол\test_project_management_system\ProjectManagementSystem.ConsoleApp\Components\MenuPages\RegistrationNewUserMenuPage.cs" containingFunctionPresentation="Method 'OpenPageAsync'">
-            <startOffsets>
-              <option value="1573" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1622" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Adding the ability to register a user for a supervisor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the ability to register a user for a supervisor" />
   </component>
 </project>

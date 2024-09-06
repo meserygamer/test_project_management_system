@@ -55,32 +55,6 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
     {
         Console.Clear();
     }
-    
-    public static string GetStringFromConsoleWithValidation(
-        string messageForInput,
-        string errorMessage,
-        List<ValidationAttribute> validationAttributes,
-        bool isPrintErrors = true
-        )
-    {
-        string value;
-        List<ValidationResult> validationResults;
-        while (true)
-        {
-            Console.WriteLine(messageForInput);
-            value = Console.ReadLine() ?? string.Empty;
-            validationResults = new();
-            if (Validator.TryValidateValue(value, new ValidationContext(value), validationResults, validationAttributes))
-                break;
-            
-            Console.Clear();
-            Console.WriteLine(errorMessage);
-            if(isPrintErrors)
-                foreach (var validationResult in validationResults) 
-                    Console.WriteLine(validationResult.ErrorMessage);
-        }
-        return value;
-    }
 
     private string GetNameFromUser()
     {
@@ -89,7 +63,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
         {
             ErrorMessage = "Имя должно быть длиннее или равно 3 символам"
         }];
-        return GetStringFromConsoleWithValidation(
+        return ConsoleExtension.GetStringFromConsoleWithValidation(
             "Введите имя пользователя (мин. 3 символа):",
             "Имя некорректно!",
             validationAttributes
@@ -103,7 +77,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
         {
             ErrorMessage = "Фамилия должна быть длиннее или равна 3 символам"
         }];
-        return GetStringFromConsoleWithValidation(
+        return ConsoleExtension.GetStringFromConsoleWithValidation(
             "Введите фамилию пользователя (мин. 3 символа):",
             "Фамилия некорректна!",
             validationAttributes
@@ -121,7 +95,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
     {
         Console.Clear();
         List<ValidationAttribute> validationAttributes = [new EmailAddressAttribute()];
-        return GetStringFromConsoleWithValidation(
+        return ConsoleExtension.GetStringFromConsoleWithValidation(
             "Введите email пользователя",
             "Email некорректен!",
             validationAttributes,
@@ -139,7 +113,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
             {
                 ErrorMessage = "Логин должен быть длиннее или равен 3 символам"
             }];
-            login = GetStringFromConsoleWithValidation(
+            login = ConsoleExtension.GetStringFromConsoleWithValidation(
                 "Введите логин пользователя",
                 "Логин некорректен!",
                 validationAttributes
@@ -166,7 +140,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
                                "4) Иметь минимум одну цифру (0-9)"
             },
         ];
-        return GetStringFromConsoleWithValidation(
+        return ConsoleExtension.GetStringFromConsoleWithValidation(
             "Введите пароль пользователя:",
             "Пароль некорректен!",
             validationAttributes

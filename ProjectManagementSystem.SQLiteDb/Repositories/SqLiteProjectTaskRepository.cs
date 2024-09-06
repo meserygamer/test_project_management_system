@@ -18,6 +18,18 @@ public class SqLiteProjectTaskRepository : IProjectTaskRepository
         _dbContextFactory = dbContextFactory ?? throw new ArgumentNullException();
         _mapperProjectTaskToCore = mapperToCore ?? throw new ArgumentNullException();
     }
+
+    public async Task<List<ProjectTask>> GetAllTasksAsync()
+    {
+        using (ProjectManagementSystemSQLiteDbContext dbContext = _dbContextFactory.Invoke())
+        {
+            List<ProjectTaskEntity> tasksFromDb = await dbContext.ProjectTasks
+                .Include(pt => pt.TaskStatus)
+                .Include(pt => pt.ResponsibleUser)
+                .ToListAsync();
+            return tasksFromDb.ConvertAll<ProjectTask>(pt => _mapperProjectTaskToCore.MapToDestination(pt));
+        }
+    }
     
     public async Task<List<ProjectTask>> GetAllUsersTasksAsync(int userId)
     {
@@ -26,6 +38,7 @@ public class SqLiteProjectTaskRepository : IProjectTaskRepository
             List<ProjectTaskEntity> tasksFromDb = await dbContext.ProjectTasks
                 .Where(pt => pt.ResponsibleUserId == userId)
                 .Include(pt => pt.TaskStatus)
+                .Include(pt => pt.ResponsibleUser)
                 .ToListAsync();
             return tasksFromDb.ConvertAll<ProjectTask>(pt => _mapperProjectTaskToCore.MapToDestination(pt));
         }
@@ -37,6 +50,7 @@ public class SqLiteProjectTaskRepository : IProjectTaskRepository
         {
             ProjectTaskEntity? taskFromDb = await dbContext.ProjectTasks
                 .Include(pt => pt.TaskStatus)
+                .Include(pt => pt.ResponsibleUser)
                 .FirstOrDefaultAsync(pt => pt.Id == taskId);
             return taskFromDb is not null ? _mapperProjectTaskToCore.MapToDestination(taskFromDb) : null;
         }
@@ -60,5 +74,23 @@ public class SqLiteProjectTaskRepository : IProjectTaskRepository
             return false;
         }
         
+    }
+
+    public async Task<bool> TryAddProjectTaskAsync(ProjectTask projectTask)
+    {
+        ProjectTaskEntity taskEntity = _mapperProjectTaskToCore.MapToSource(projectTask);
+        try
+        {
+            using (ProjectManagementSystemSQLiteDbContext dbContext = new ProjectManagementSystemSQLiteDbContext())
+            {
+                await dbContext.ProjectTasks.AddAsync(taskEntity);
+                await dbContext.SaveChangesAsync();
+            }
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
     }
 }

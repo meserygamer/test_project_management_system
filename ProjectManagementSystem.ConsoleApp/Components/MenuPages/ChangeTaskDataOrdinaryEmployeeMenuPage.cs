@@ -91,27 +91,4 @@ public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
 
         Console.WriteLine();
     }
-    
-    /*
-    private async Task<int?> GetUserChoiceFromConsoleAsync(Func<Task> inputErrorHandler)
-    {
-        int numberTaskForEditing = 0;
-        while (true)
-        {
-            string? userChoice = Console.ReadLine();
-            if (userChoice.IsInList("n", "N"))
-                return null;
-            
-            if (userChoice.TryConvertToInt32(out numberTaskForEditing) 
-                && numberTaskForEditing.IsInRange(1, _taskStatuses?.Count ?? 0))
-                break;
-            
-            if(inputErrorHandler is not null)
-                await inputErrorHandler.Invoke();
-        }
-
-        return numberTaskForEditing;
-    }
-    */
-    
 }
