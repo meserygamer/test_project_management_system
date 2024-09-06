@@ -27,14 +27,14 @@ public class ProjectTask
     /// <summary>
     /// Current task status
     /// </summary>
-    public TaskStatus TaskStatus { get; set; }
+    public TaskStatus TaskStatus { get; set; } = null!;
 
     /// <summary>
     /// Responsible for completing the task
     /// </summary>
-    public User ResponsibleUser { get; set; } = null!;
-    
-    public string ProjectTaskInfo
+    public User? ResponsibleUser { get; set; }
+
+    public string ProjectTaskInfo 
         => new StringBuilder()
             .Append($"Номер задачи: {Id}\n")
             .Append($"Заголовок: {Title}\n")
@@ -42,4 +42,23 @@ public class ProjectTask
             .Append($"Дата начала: {StartTime}\n")
             .Append($"Статус: {TaskStatus.Title}\n")
             .ToString();
+
+    public string ProjectTaskInfoWithResponsible
+    {
+        get
+        {
+            string responsibleUser = ResponsibleUser is not null 
+                ? $"{ResponsibleUser.FullName} ({ResponsibleUser.Login})"
+                : "-";
+            return new StringBuilder()
+                .Append($"Номер задачи: {Id}\n")
+                .Append($"Заголовок: {Title}\n")
+                .Append($"Описание: {Description}\n")
+                .Append($"Дата начала: {StartTime}\n")
+                .Append($"Статус: {TaskStatus.Title}\n")
+                .Append($"Ответсвенный: {responsibleUser}\n")
+                .ToString();
+        }
+    }
+    
 }

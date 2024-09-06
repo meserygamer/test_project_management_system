@@ -26,8 +26,7 @@ public class ProjectTaskConfiguration : IEntityTypeConfiguration<ProjectTaskEnti
         builder.Property(pt => pt.TaskStatusId)
             .IsRequired();
 
-        builder.Property(pt => pt.ResponsibleUserId)
-            .IsRequired();
+        builder.Property(pt => pt.ResponsibleUserId);
 
         builder.HasOne(pt => pt.TaskStatus)
             .WithMany(ts => ts.Tasks)
