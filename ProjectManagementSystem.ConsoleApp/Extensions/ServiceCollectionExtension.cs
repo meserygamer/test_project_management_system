@@ -22,6 +22,7 @@ public static class ServiceCollectionExtension
         serviceCollection.AddSingleton<TaskService>();
         serviceCollection.AddSingleton<TaskStatusService>();
         serviceCollection.AddSingleton<UserService>();
+        serviceCollection.AddSingleton<ChangeOfTaskStatusService>();
         return serviceCollection;
     }
     
@@ -42,6 +43,7 @@ public static class ServiceCollectionExtension
         serviceCollection.AddTransient<IUserRepository, SqLiteUserRepository>();
         serviceCollection.AddTransient<IProjectTaskRepository, SqLiteProjectTaskRepository>();
         serviceCollection.AddTransient<ITaskStatusRepository, SqLiteTaskStatusRepository>();
+        serviceCollection.AddTransient<IChangeOfTaskStatusRepository, SqLiteChangeOfTaskStatusRepository>();
         return serviceCollection;
     }
 
@@ -53,6 +55,9 @@ public static class ServiceCollectionExtension
             .AddSingleton<IMapper<ProjectTaskEntity, ProjectTask>, DeepMapperProjectTaskEntityToProjectTask>();
         serviceCollection
             .AddSingleton<IMapper<TaskStatusEntity, TaskStatus>, MapperTaskStatusEntityToTaskStatus>();
+        serviceCollection
+            .AddSingleton<IMapper<ChangeOfTaskStatusEntity, ChangeOfTaskStatus>,
+                MapperChangeOfTaskStatusEntityToChangeOfTaskStatus>();
         return serviceCollection;
     }
 

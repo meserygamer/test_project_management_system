@@ -29,6 +29,9 @@ public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
         if (base.ParentMenu is null) 
             throw new NullReferenceException($"{nameof(base.ParentMenu)} was null");
         
+        if (base.User is null) 
+            throw new NullReferenceException($"{nameof(base.User)} was null");
+        
         SetChangeTaskIdFromBundle();
         
         await PrintTaskAndPossibleChangesAsync();
@@ -40,7 +43,8 @@ public class ChangeTaskDataOrdinaryEmployeeMenuPage : BaseMenuPage
                 );
         
         if (userChoice is not null)
-            await _taskService.UpdateStatusForTaskAsync(_changeTaskId, _taskStatuses![(int)userChoice - 1].Id);
+            await _taskService.UpdateStatusForTaskAsync(_changeTaskId,
+                _taskStatuses![(int)userChoice - 1].Id, User.Id);
                 
         await base.ParentMenu.ChangePageWithOpenAsync(
             typeof(TaskListOrdinaryEmployeeMenuPage),

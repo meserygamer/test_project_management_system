@@ -56,7 +56,7 @@ public class ProjectTask
                 .Append($"Описание: {Description}\n")
                 .Append($"Дата начала: {StartTime}\n")
                 .Append($"Статус: {TaskStatus.Title}\n")
-                .Append($"Ответсвенный: {responsibleUser}\n")
+                .Append($"Ответственный: {responsibleUser}\n")
                 .ToString();
         }
     }

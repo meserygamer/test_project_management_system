@@ -121,6 +121,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
             if(await _userService.IsUniqueLoginAsync(login))
                 break;
             
+            Console.Clear();
             Console.WriteLine("Логин занят! Попробуйте другой");
         }
 
@@ -139,6 +140,7 @@ public class RegistrationNewUserMenuPage : BaseMenuPage
                                "3) Иметь минимум одну строчную букву (a-z)\n" +
                                "4) Иметь минимум одну цифру (0-9)"
             },
+            new RequiredAttribute()
         ];
         return ConsoleExtension.GetStringFromConsoleWithValidation(
             "Введите пароль пользователя:",
